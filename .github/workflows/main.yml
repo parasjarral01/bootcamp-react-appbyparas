@@ -22,7 +22,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - name: Setup Node.js environment
-      uses: actions/setup-node@v1.4.2
+      uses: actions/setup-node@v2-beta
       with:
         version: 12
     - name: Github Action for Yarn
@@ -30,6 +30,7 @@ jobs:
       with:
         # yarn install command
         cmd: install # npn install/ yarn install
+
     - name: build yarn   # it build the yarn on github repo 
       run: yarn build
          
