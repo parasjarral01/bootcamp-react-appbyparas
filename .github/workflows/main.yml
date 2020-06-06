@@ -24,7 +24,7 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v1.4.2
       with:
-           version: 12
+          version: 12
       - name: Github Action for Yarn
       user: Borales/actions-yarn@2.1.0
       with:
