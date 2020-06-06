@@ -25,11 +25,11 @@ jobs:
       uses: actions/setup-node@v1.4.2
       with:
            version: 12
-            - name: GitHub Action for Yarn
-         user: Borales/actions-yarn@2.1.0
-         with:
-         # yarn install command
-         cmd: install # npn install/ yarn install
+    - name: GitHub Action for Yarn
+      user: Borales/actions-yarn@2.1.0
+      with:
+        # yarn install command
+            cmd: install # npn install/ yarn install
          
-         - name: installing surge
-           run: surge ./build http://reactappbyparas.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+    - name: installing surge
+      run: surge ./build http://reactappbyparas.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
