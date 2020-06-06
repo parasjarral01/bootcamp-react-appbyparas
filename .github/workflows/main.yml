@@ -31,8 +31,11 @@ jobs:
         # yarn install command
         cmd: install # npn install/ yarn install
 
-    - name: build yarn   # it build the yarn on github repo 
+    - name: build yarn on github  # it build the yarn on github repo 
       run: yarn build
-         
+    
+    - name: install surge on github
+      run: npm install -g surge
+
     - name: installing surge
       run: surge ./build http://reactappbyparas.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
